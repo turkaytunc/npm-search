@@ -7,7 +7,13 @@ interface RepoState {
   data: string[];
 }
 
-export const repoReducer = (state: RepoState, action: RepoAction): RepoState => {
+const initialState = {
+  loading: false,
+  error: null,
+  data: [],
+};
+
+export const repoReducer = (state: RepoState = initialState, action: RepoAction): RepoState => {
   switch (action.type) {
     case RepoActionType.SEARCH:
       return { loading: true, error: null, data: [] };

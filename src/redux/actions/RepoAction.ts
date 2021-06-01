@@ -11,5 +11,4 @@ export type RepoAction =
     }
   | {
       type: RepoActionType.SEARCH;
-      payload: null;
     };
