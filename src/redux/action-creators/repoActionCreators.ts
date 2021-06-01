@@ -10,10 +10,7 @@ export const searchRepositories = (term: string) => {
       const response = await fetch(`https://registry.npmjs.org/-/v1/search?text=${term}`);
       const data = await response.json();
 
-      console.log(data);
-      return;
-
-      dispatch({ type: RepoActionType.SUCCESS, payload: data });
+      dispatch({ type: RepoActionType.SUCCESS, payload: data.objects });
     } catch (error) {
       dispatch({
         type: RepoActionType.ERROR,
