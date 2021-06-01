@@ -1,1 +1,1 @@
-export { RepoActionType } from './repoActionType';
+export { RepoActionType } from './RepoActionType';
