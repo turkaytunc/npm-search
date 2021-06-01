@@ -1,7 +1,12 @@
 import './App.css';
+import { ReposList } from './components/ReposList';
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <ReposList />
+    </div>
+  );
 }
 
 export default App;
